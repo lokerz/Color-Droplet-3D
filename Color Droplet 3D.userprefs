@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StageManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RingRotate.cs">
     <Files>
-      <File FileName="Assets\Scripts\Droplets.cs" Line="12" Column="31" />
-      <File FileName="Assets\Scripts\SpawnManager.cs" Line="5" Column="44" />
-      <File FileName="Assets\Scripts\StageManager.cs" Line="9" Column="9" />
-      <File FileName="Assets\Scripts\Ring.cs" Line="33" Column="2" />
-      <File FileName="Assets\Scripts\CollisionCheck.cs" Line="16" Column="16" />
-      <File FileName="Assets\Scripts\RingRotate.cs" Line="23" Column="53" />
+      <File FileName="Assets\Scripts\Droplets.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StageManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Ring.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CollisionCheck.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RingRotate.cs" Line="20" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 219614701}
   - component: {fileID: 219614703}
   - component: {fileID: 219614704}
+  - component: {fileID: 219614705}
   m_Layer: 0
   m_Name: Rings
   m_TagString: Untagged
@@ -181,8 +182,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 94
   m_CollisionDetection: 0
+--- !u!65 &219614705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219614700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4.5, z: 3}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &269661130
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +417,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
