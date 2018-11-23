@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Droplets.cs" />
      <Compile Include="Assets\Scripts\Ring.cs" />
      <Compile Include="Assets\Scripts\RingRotate.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\StageManager.cs" />
  <Reference Include="UnityEngine.UI">

@@ -22,7 +22,7 @@ public class StageManager : MonoBehaviour {
 	}
 
 	void Update () {
-		if (lives == 0)
+		if (lives <= 0)
 			GameOver ();
 
 		if (playing)
@@ -53,5 +53,11 @@ public class StageManager : MonoBehaviour {
 		SpawnManager.spawning = false;
 		playButton.SetActive(false);
 		playing = true;
+	}
+
+	public void Vibrate(){
+		#if UNITY_ANDROID
+		Handheld.Vibrate ();
+		#endif
 	}
 }

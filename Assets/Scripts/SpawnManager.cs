@@ -10,10 +10,12 @@ public class SpawnManager : MonoBehaviour {
 	public float height;
 	public GameObject dropletsPrefab;
 	public Transform dropletsParent;
+	public GameObject particlesPrefab;
+
 
 	private Vector3 dropletsPos;
 	private float offset = 0.35f;
-
+	private GameObject particles;
 
 	void FixedUpdate () {
 		if (!spawning) {
@@ -23,7 +25,6 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	IEnumerator Spawn(){
-		Debug.Log (delay);
 		Instantiate (dropletsPrefab, RandomizePos(), Quaternion.identity, dropletsParent);
 		yield return new WaitForSeconds (delay);
 		delay *= delayMultiplier;
@@ -44,5 +45,24 @@ public class SpawnManager : MonoBehaviour {
 		else
 			pos.z -= offset;
 		return pos;
+	}
+
+	public void ParticleSplash(string color, Vector3 pos){
+		particles = Instantiate (particlesPrefab, pos, Quaternion.identity);
+		particles.tag = color;
+
+		if (particles.tag == "Red") {
+			particles.GetComponent<ParticleSystemRenderer> ().material.SetColor ("_Color", Color.red);
+		} else if (particles.tag == "Yellow") {
+			particles.GetComponent<ParticleSystemRenderer> ().material.SetColor ("_Color", Color.yellow);
+		} else {
+			particles.GetComponent<ParticleSystemRenderer> ().material.SetColor ("_Color", Color.blue);
+		}
+		StartCoroutine ("DestroyParticle");
+	}
+
+	IEnumerator DestroyParticle(){
+		yield return new WaitForSeconds (1);
+		DestroyObject(particles);
 	}
 }
